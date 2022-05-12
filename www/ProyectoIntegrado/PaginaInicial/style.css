@@ -1,0 +1,423 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    padding: 90px 20px 0;
+}
+/*--------------PARA ORDENADOR------------------*/
+.header {
+    background-color: #6dbad1;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
+}
+
+.nav-menu {
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.nav-menu-item {
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.nav-menu-link {
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+
+.nav-menu-link:hover,
+.nav-menu-link_active {
+    background-color: #1191b8;
+    transition: 0.5s;
+}
+
+/*--------------PARA MOVILES------------------*/
+.nav-toggle {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+    .header {
+        height: 60px;
+    }
+    .logo {
+        font-size: 25px;
+        padding: 0 20px;
+        line-height: 60px;
+    }
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 20px;
+        background-color: #1191b8;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+        height: calc(100% - 60px);
+        overflow-y: auto;
+        left: 100%;
+        transition: left 0.3s;
+    }
+    .nav-menu-item {
+        line-height: 70px;
+    }
+    .nav-menu-link:hover,
+    .nav-menu-link_active{
+        background: none;
+        color: magenta;
+    }
+    .nav-toggle {
+        display: block;
+    }
+    .nav-menu_visible {
+        left: 0;
+    }
+    .nav-toggle:focus:not(:focus-visible){
+        outline: none;
+    }
+}
+
+/*--------------PARA LA WEB MOVIL------------------*/
+
+h1 {
+    font-size: 3.5em;
+}
+h2{
+    font-size: 2.7em;
+}
+h3 {
+    font-size: 2em;
+}
+p{
+    font-size: 1.25em;
+}
+ul{
+    list-style: none;
+}
+li{
+    font-size: 1.25em;
+}
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 10px black;
+    color: white;
+    background-color: #6dbad1;
+}
+button:hover{
+    background-color: #1191b8;
+}
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    color: white;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("imagenes/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#hero h1{
+    color: white;
+}
+#hero button{
+    font-size: 1.75em;
+}
+#somos-proya .container{
+    text-align: center;
+    padding: 200px 12px;
+}
+.colorletra{
+    color: #6dbad1;
+}
+#nuestros-cursos{
+    background-color: rgb(30, 30, 30);
+    color: white;
+    text-align: center;
+}
+#nuestros-cursos .container{
+    padding: 150px 12px;
+}
+#nuestros-cursos h2{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+#nuestros-cursos p{
+    display: none;
+}
+#nuestros-cursos .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 15px;
+}
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("imagenes/sri.jpg");
+}
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("imagenes/sad.jpg");
+}
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("imagenes/aso.jpg");
+}
+.carta:nth-child(4){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("imagenes/iaw.jpg");
+}
+.carta:nth-child(5){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("imagenes/hlc.png");
+}
+.carta:nth-child(6){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("imagenes/eie.png");
+}
+.carta:nth-child(7){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("imagenes/abd.jpg");
+}
+#caracteristicas .container{
+    text-align: center;
+    padding: 200px 12px;
+}
+#caracteristicas li{
+    margin: 16px 0px;
+    font-weight: bold;
+}
+footer{
+    background-color: rgb(230, 230, 230);
+}
+footer p{
+    margin: 0px;
+    padding: 12px;
+    color: rgb(100, 100, 100);
+}
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+@media (min-width: 720px){
+#hero h1{
+    font-size: 5em;
+}
+#somos-proya .container{
+    display: flex;
+    justify-content: space-evenly;
+}
+#somos-proya .texto{
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#somos-proya h2{
+    margin-top: 0px;
+}
+#somos-proya .image-container{
+    background-image: url("imagenes/caracteristicas.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 450px;
+    width: 400px;
+}
+#nuestros-cursos .programas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;   
+}
+#nuestros-cursos p{
+    display: block;
+    margin-bottom: 30px;
+}
+#nuestros-cursos h3{
+    margin-top: 0px;
+}
+#nuestros-cursos .carta{
+    padding: 50px;
+}
+#caracteristicas{
+    background-image: url("imagenes/caracteristicas.png");
+    background-repeat: no-repeat;
+    background-size: 500px 400px;
+    background-position: calc(100vw - 500px) 120px;
+}
+#caracteristicas .container{
+    text-align: initial;
+}
+#caracteristicas ul{
+    margin-left: 100px;
+}
+}
+@media (min-width: 1200px){
+    #caracteristicas{
+        background-position: calc(100vw - 800px);
+    }
+}
+.w3-green{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 3vw; 
+}
+.formulario{
+	width: 100½;
+	max-width: 600px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.contenedor_label_formulario{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.formulario input{
+	width: 300½;
+	height: 30px;
+	margin: 1.5rem;
+}
+
+.contenedor_boton_formulario{
+	justify-self: center;
+	align-self: center;
+	margin-bottom: 75px;
+}
+.contenedor_boton_formulario > button{
+	width: 15vw;
+	height: 5vw;
+	padding: 0;
+	font-size: 2.5vw;
+}
+#espacio{
+    font-size: 5px;
+    background: rgb(30, 30, 30);
+}
+#conocenos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 35vh;
+    color: white;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("imagenes/sobrenosotros.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+@media (min-width: 720px){
+    #somos-proya .image-usuario{
+        background-image: url("imagenes/usuario.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 400px;
+        width: 400px;
+    }
+}
